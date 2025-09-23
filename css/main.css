@@ -1,0 +1,295 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* font dễ đọc cho nội dung */
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Heading + logo */
+h1, h2, h3, h4, h5, h6,
+.logo,
+.btn-cv {
+  font-family: "Orbitron", sans-serif; /* font đặc biệt cho tiêu đề */
+}
+
+/* Dark Mode */
+body.dark {
+  background: #001f3f;
+  color: #f1f1f1;
+}
+
+body.dark .navbar,
+body.dark footer {
+  background: #002b5c;
+}
+
+body.dark a {
+  color: #f5f6f8;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: #001f3f;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0e0e0e;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #fdfeff;
+}
+
+#darkToggle {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #e6f0ff);
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text span {
+  color: #001f3f;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #001f3f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-family: "Orbitron", sans-serif; /* nút cũng dùng Orbitron */
+}
+
+.btn:hover {
+  background: #004080;
+}
+
+/* Sections */
+section {
+  padding: 4rem 8%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #001f3f;
+}
+
+/* About */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #001f3f;
+}
+
+/* Skills */
+.skill-list {
+  list-style: none;
+  max-width: 700px;
+  margin: auto;
+}
+
+.skill-list li {
+  padding: 0.8rem;
+  margin: 0.4rem 0;
+  background: #c6c7c9;
+  border-left: 5px solid #001f3f;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.skill-list li:hover {
+  transform: translateX(5px);
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+  background: #d7d7d8;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 a {
+  color: #001f3f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card h3 a:hover {
+  color: #004080;
+}
+
+/* Contact */
+.contact p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.contact a {
+  color: #001f3f;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #001f3f;
+  color: #000000;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Animations */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CV button */
+.cv-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  color: #ba9bf0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif; /* font đặc biệt cho CV */
+}
+
+.btn-cv:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #e52e71, #ff8a00);
+}
