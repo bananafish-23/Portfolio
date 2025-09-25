@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Trương Thảo Vy </title>
+  <title>Portfolio - Trương Thảo Vy</title>
   <link rel="stylesheet" href="css/main.css" />
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Trương Thảo Vy </h1>
+      <h1 class="logo">Trương Thảo Vy</h1>
       <ul>
         <li><a href="#about">Giới thiệu</a></li>
         <li><a href="#skills">Kỹ năng</a></li>
@@ -29,7 +29,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text animate fade-in">
-      <h2>Xin chào, mình là <span>Trương Thảo Vy </span> 🌸🐣💖</h2>
+      <h2>Xin chào, mình là <span>Trương Thảo Vy</span> 🌸🐣💖</h2>
       <p>Data & AI</p>
       <a href="#projects" class="btn">Xem dự án</a>
     </div>
@@ -92,23 +92,20 @@
         </h3>
         <p>Ứng dụng Machine Learning trong phân khúc khách hàng bán lẻ: Mô hình LRFMV và CLV.</p>
       </div>
-      <!-- Project 4 -->
-       <!-- Project 4 -->
-<div class="project-card powerbi animate slide-up">
-  <img src="img/project4.png" alt="Power BI Project" class="project-img"/>
-  <h3>
-    <a href="https://app.powerbi.com/groups/45de2124-8353-4fd8-b433-96093fd55e26/reports/d9f4a97b-20d9-4015-93be-c3ceaec44025/46a79d31c1e141fd38e4?experience=power-bi&bookmarkGuid=e3e1fbce55b0f99235e8" target="_blank">
-      Sales Dashboard with Power BI
-    </a>
-  </h3>
-  <p>
-    Xây dựng dashboard trực quan hóa dữ liệu bán hàng với Power BI: doanh thu, lợi nhuận, xu hướng và phân tích khách hàng.
-  </p>
-  <span class="tag">Power BI</span>
-</div>
 
-    
-    
+      <!-- Project 4 -->
+      <div class="project-card powerbi animate slide-up">
+        <img src="img/project4.png" alt="Power BI Project" class="project-img"/>
+        <h3>
+          <a href="https://app.powerbi.com/groups/me/reports/fefa5e21-62c7-421a-9f82-1082d2294ab5/836e7f8464cd00652643?experience=power-bi" target="_blank">
+            Sales Dashboard with Power BI
+          </a>
+        </h3>
+        <p>
+          Xây dựng dashboard trực quan hóa dữ liệu bán hàng với Power BI: doanh thu, lợi nhuận, xu hướng và phân tích khách hàng.
+        </p>
+        <span class="tag">Power BI</span>
+      </div>
     </div>
   </section>
 
@@ -127,12 +124,14 @@
 
   <!-- JS -->
   <script>
+    // Dark mode toggle
     const toggle = document.getElementById("darkToggle");
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");
       toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
     });
 
+    // Animation on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
